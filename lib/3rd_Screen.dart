@@ -19,9 +19,15 @@ class ScreenNumber3 extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Image.asset('assets/images/Group 4.png'),
-                      Image(
-                        image: AssetImage('assets/images/Vector.png'),
+                      InkWell(
+                        child: Image.asset('assets/images/Group 4.png'),
+                        onTap: () {},
+                      ),
+                      InkWell(
+                        child: Image(
+                          image: AssetImage('assets/images/Vector.png'),
+                        ),
+                        onTap: () {},
                       ),
                     ],
                   ),
@@ -32,25 +38,27 @@ class ScreenNumber3 extends StatelessWidget {
               padding: const EdgeInsets.only(top: 10, right: 80),
               child: Container(
                 width: 260,
-                height: 60,
+                height: 70,
                 child: RichText(
                   text: TextSpan(
                     children: <TextSpan>[
                       TextSpan(
                         text: 'Hello $userName,',
                         style: TextStyle(
-                          fontFamily: "Brandon",
-                          fontSize: 20,
+                          fontFamily: "Brandon_reg",
+                          fontSize: 25,
+                          fontWeight: FontWeight.w100,
                           color: Color(0xff27214D),
                         ),
                       ),
                       TextSpan(
-                          text: 'What fruit salad combo do you want today?',
+                          text: ' What fruit salad'
+                              '       combo do you want today?',
                           style: TextStyle(
                               fontFamily: "Brandon",
-                              fontWeight: FontWeight.bold,
+                              fontWeight: FontWeight.w600,
                               color: Color(0xff27214D),
-                              fontSize: 20)),
+                              fontSize: 22)),
                     ],
                   ),
                 ),
