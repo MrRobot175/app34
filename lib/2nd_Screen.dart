@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:app34/3rd_Screen.dart';
 
-class ScreenNumber2 extends StatelessWidget {
+class ScreenNumber2 extends StatefulWidget {
+  @override
+  _ScreenNumber2State createState() => _ScreenNumber2State();
+}
+
+class _ScreenNumber2State extends State<ScreenNumber2> {
+  final TextEditingController _nameController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //resizeToAvoidBottomInset: false,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -36,6 +43,7 @@ class ScreenNumber2 extends StatelessWidget {
                 width: 350,
                 height: 56,
                 child: TextFormField(
+                  controller: _nameController,
                   decoration: InputDecoration(
                     hintText: "Tony",
                     hintStyle: TextStyle(
@@ -79,7 +87,31 @@ class ScreenNumber2 extends StatelessWidget {
                     ),
                     elevation: 0,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    String userName = _nameController.text
+                        .trim(); // Remove leading and trailing whitespace
+
+                    if (userName.isNotEmpty) {
+                      // Check if the input is not empty
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return ScreenNumber3(userName: userName);
+                          },
+                        ),
+                      );
+                    } else {
+                      // Show a SnackBar with the error message
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text('Please enter your name'),
+                          duration: Duration(
+                              seconds: 2), // Adjust the duration as needed
+                        ),
+                      );
+                    }
+                  },
                 ),
               ),
             ),
