@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class ScreenNumber3 extends StatelessWidget {
   final String userName;
@@ -20,12 +21,27 @@ class ScreenNumber3 extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       InkWell(
-                        child: Image.asset('assets/images/Group 4.png'),
+                        child: SvgPicture.asset("assets/images/Group.svg"),
                         onTap: () {},
                       ),
                       InkWell(
-                        child: Image(
-                          image: AssetImage('assets/images/Vector.png'),
+                        child: Container(
+                          child: Column(
+                            children: [
+                              SvgPicture.asset("assets/images/Vector.svg"),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 4),
+                                child: Text(
+                                  "My basket",
+                                  style: TextStyle(
+                                    fontSize: 10,
+                                    fontFamily: "Brandon_reg",
+                                    color: Color(0xff27214D),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                         onTap: () {},
                       ),
@@ -38,7 +54,7 @@ class ScreenNumber3 extends StatelessWidget {
               padding: const EdgeInsets.only(top: 10, right: 80),
               child: Container(
                 width: 260,
-                height: 70,
+                height: 170,
                 child: RichText(
                   text: TextSpan(
                     children: <TextSpan>[
@@ -52,8 +68,14 @@ class ScreenNumber3 extends StatelessWidget {
                         ),
                       ),
                       TextSpan(
-                          text: ' What fruit salad'
-                              '       combo do you want today?',
+                          text: ' What fruit salad ',
+                          style: TextStyle(
+                              fontFamily: "Brandon",
+                              fontWeight: FontWeight.w600,
+                              color: Color(0xff27214D),
+                              fontSize: 22)),
+                      TextSpan(
+                          text: 'combo do you want today? ',
                           style: TextStyle(
                               fontFamily: "Brandon",
                               fontWeight: FontWeight.w600,
@@ -63,6 +85,9 @@ class ScreenNumber3 extends StatelessWidget {
                   ),
                 ),
               ),
+            ),
+            Row(
+              children: [],
             )
           ],
         ),

@@ -1,5 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:app34/3rd_Screen.dart';
+import 'package:flutter/services.dart';
+
+import '3rd_Screen.dart';
+
+class MaxLengthFormatter extends TextInputFormatter {
+  final int maxLength;
+
+  MaxLengthFormatter(this.maxLength);
+
+  @override
+  TextEditingValue formatEditUpdate(TextEditingValue oldValue, TextEditingValue newValue) {
+    if (newValue.text.length <= maxLength) {
+      return newValue;
+    }
+    return TextEditingValue(
+      text: newValue.text.substring(0, maxLength),
+      selection: newValue.selection.copyWith(
+        baseOffset: maxLength,
+        extentOffset: maxLength,
+      ),
+    );
+  }
+}
 
 class ScreenNumber2 extends StatefulWidget {
   @override
@@ -43,7 +65,9 @@ class _ScreenNumber2State extends State<ScreenNumber2> {
                 width: 350,
                 height: 56,
                 child: TextFormField(
+                  maxLines: 1,
                   controller: _nameController,
+                  inputFormatters: [MaxLengthFormatter(8)],
                   decoration: InputDecoration(
                     hintText: "Tony",
                     hintStyle: TextStyle(
@@ -88,11 +112,9 @@ class _ScreenNumber2State extends State<ScreenNumber2> {
                     elevation: 0,
                   ),
                   onPressed: () {
-                    String userName = _nameController.text
-                        .trim(); // Remove leading and trailing whitespace
+                    String userName = _nameController.text.trim();
 
                     if (userName.isNotEmpty) {
-                      // Check if the input is not empty
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -102,12 +124,10 @@ class _ScreenNumber2State extends State<ScreenNumber2> {
                         ),
                       );
                     } else {
-                      // Show a SnackBar with the error message
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
                           content: Text('Please enter your name'),
-                          duration: Duration(
-                              seconds: 2), // Adjust the duration as needed
+                          duration: Duration(seconds: 2),
                         ),
                       );
                     }
