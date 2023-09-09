@@ -79,7 +79,7 @@ class SecondScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(
               top: 65,
-              bottom: 77,
+              bottom: 50,
             ),
             child: Container(
               width: 350,
