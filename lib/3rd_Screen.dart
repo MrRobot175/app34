@@ -20,7 +20,7 @@ class ScreenNumber3 extends StatelessWidget {
                 child: SingleChildScrollView(
                   child: Padding(
                     padding:
-                        const EdgeInsets.only(top: 50, right: 25, left: 25),
+                        const EdgeInsets.only(top: 45, right: 25, left: 25),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -139,14 +139,17 @@ class ScreenNumber3 extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 25, right: 0),
-                    child: SvgPicture.asset("assets/images/Group 6.svg",
-                        height: 17, width: 26, fit: BoxFit.scaleDown),
+                    child: InkWell(
+                      onTap: () {},
+                      child: SvgPicture.asset("assets/images/Group 6.svg",
+                          height: 17, width: 26, fit: BoxFit.scaleDown),
+                    ),
                   ),
                 ],
               ),
               Padding(
                 padding: const EdgeInsets.only(
-                    left: 25, right: 137, top: 39, bottom: 5),
+                    left: 25, right: 137, top: 39, bottom: 24),
                 child: Text(
                   "Recommended Combo",
                   style: TextStyle(
@@ -346,344 +349,354 @@ class ScreenNumber3 extends StatelessWidget {
                   ),
                 ],
               ),
-              Row(
-                children: [
-                  SizedBox(
-                    width: 24,
-                  ),
-                  Container(
-                    child: Text(
-                      "Hottest",
-                      style: TextStyle(
-                        fontSize: 24,
-                        fontFamily: "Brandon",
-                        color: Color(0xff27214D),
+              Padding(
+                padding: const EdgeInsets.only(
+                  bottom: 0,
+                ),
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: 24,
+                    ),
+                    Container(
+                      child: Text(
+                        "Hottest",
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontFamily: "Brandon",
+                          color: Color(0xff27214D),
+                        ),
                       ),
-                    ),
-                    padding: EdgeInsets.only(
-                      bottom: 0, // Space between underline and text
-                    ),
-                    decoration: BoxDecoration(
-                      border: Border(
-                        bottom: BorderSide(
-                          color: Color(0xffFFA451),
-                          width: 2.0, // Underline thickness
+                      padding: EdgeInsets.only(
+                        bottom: 0,
+                      ),
+                      decoration: BoxDecoration(
+                        border: Border(
+                          bottom: BorderSide(
+                            color: Color(0xffFFA451),
+                            width: 2.0,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    width: 30,
-                  ),
-                  Text(
-                    "Popular",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontFamily: "Brandon",
-                      color: Color(0xff938DB5),
+                    SizedBox(
+                      width: 30,
                     ),
-                  ),
-                  SizedBox(
-                    width: 32,
-                  ),
-                  Text(
-                    "New combo",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontFamily: "Brandon",
-                      color: Color(0xff938DB5),
+                    Text(
+                      "Popular",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontFamily: "Brandon",
+                        color: Color(0xff938DB5),
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    width: 32,
-                  ),
-                  Text(
-                    "Top",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontFamily: "Brandon",
-                      color: Color(0xff938DB5),
+                    SizedBox(
+                      width: 32,
                     ),
-                  ),
-                  SizedBox(
-                    width: 40,
-                  ),
-                ],
+                    Text(
+                      "New combo",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontFamily: "Brandon",
+                        color: Color(0xff938DB5),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 32,
+                    ),
+                    Text(
+                      "Top",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontFamily: "Brandon",
+                        color: Color(0xff938DB5),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 40,
+                    ),
+                  ],
+                ),
               ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    Card(
-                      color: Color(0xffFFFAEB),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16.0),
-                      ),
-                      child: Container(
-                        height: 183,
-                        width: 152,
-                        child: Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                  top: 16, right: 16, left: 120),
-                              child: InkWell(
-                                onTap: () {},
-                                child: SvgPicture.asset(
-                                  "assets/images/Vector (1).svg",
-                                  height: 14.32,
-                                  width: 16.0,
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    top: 30,
+                  ),
+                  child: Row(
+                    children: [
+                      Card(
+                        color: Color(0xffFFFAEB),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16.0),
+                        ),
+                        child: Container(
+                          height: 183,
+                          width: 152,
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    top: 16, right: 16, left: 120),
+                                child: InkWell(
+                                  onTap: () {},
+                                  child: SvgPicture.asset(
+                                    "assets/images/Vector (1).svg",
+                                    height: 14.32,
+                                    width: 16.0,
+                                  ),
                                 ),
                               ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                  top: 0, bottom: 0, right: 36, left: 36),
-                              child: InkWell(
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) {
-                                        return ScreenNumber4();
-                                      },
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    top: 0, bottom: 0, right: 36, left: 36),
+                                child: InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) {
+                                          return ScreenNumber4();
+                                        },
+                                      ),
+                                    );
+                                  },
+                                  child: Image.asset(
+                                    "assets/images/breakfast-quinoa-and-red-fruit-salad-134061-1-removebg-preview 1.png",
+                                    fit: BoxFit.scaleDown,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(5.0),
+                                child: Text(
+                                  "Quinoa fruit salad",
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontFamily: "Brandon",
+                                    color: Color(0xff27214D),
+                                  ),
+                                ),
+                              ),
+                              Row(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                      top: 10,
+                                      bottom: 11,
+                                      left: 12,
                                     ),
-                                  );
-                                },
+                                    child: SvgPicture.asset(
+                                      "assets/images/Group (1).svg",
+                                      height: 13,
+                                      width: 16,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                      left: 5,
+                                      bottom: 2,
+                                      top: 0,
+                                    ),
+                                    child: Text(
+                                      "10,000",
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        fontFamily: "Brandon_reg",
+                                        color: Color(0xffF08626),
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        bottom: 6, right: 16, left: 35),
+                                    child: InkWell(
+                                      onTap: () {},
+                                      child: SvgPicture.asset(
+                                          "assets/images/Group 10.svg"),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Card(
+                        color: Color(0xffFEF0F0),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16.0),
+                        ),
+                        child: Container(
+                          height: 183,
+                          width: 152,
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    top: 16, right: 16, left: 120),
+                                child: InkWell(
+                                  onTap: () {},
+                                  child: SvgPicture.asset(
+                                    "assets/images/Vector (1).svg",
+                                    height: 14.32,
+                                    width: 16.0,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    top: 10, bottom: 0, right: 36, left: 36),
                                 child: Image.asset(
-                                  "assets/images/breakfast-quinoa-and-red-fruit-salad-134061-1-removebg-preview 1.png",
+                                  "assets/images/Best-Ever-Tropical-Fruit-Salad8-WIDE-removebg-preview 1.png",
                                   fit: BoxFit.scaleDown,
                                 ),
                               ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(5.0),
-                              child: Text(
-                                "Quinoa fruit salad",
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontFamily: "Brandon",
-                                  color: Color(0xff27214D),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.only(top: 18, bottom: 0),
+                                child: Text(
+                                  "Tropical fruit salad",
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontFamily: "Brandon",
+                                    color: Color(0xff27214D),
+                                  ),
                                 ),
                               ),
-                            ),
-                            Row(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                    top: 10,
-                                    bottom: 11,
-                                    left: 12,
-                                  ),
-                                  child: SvgPicture.asset(
-                                    "assets/images/Group (1).svg",
-                                    height: 13,
-                                    width: 16,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                    left: 5,
-                                    bottom: 2,
-                                    top: 0,
-                                  ),
-                                  child: Text(
-                                    "10,000",
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                      fontFamily: "Brandon_reg",
-                                      color: Color(0xffF08626),
+                              Row(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                      top: 10,
+                                      bottom: 11,
+                                      left: 12,
+                                    ),
+                                    child: SvgPicture.asset(
+                                      "assets/images/Group (1).svg",
+                                      height: 13,
+                                      width: 16,
                                     ),
                                   ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                      bottom: 6, right: 16, left: 35),
-                                  child: InkWell(
-                                    onTap: () {},
-                                    child: SvgPicture.asset(
-                                        "assets/images/Group 10.svg"),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Card(
-                      color: Color(0xffFEF0F0),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16.0),
-                      ),
-                      child: Container(
-                        height: 183,
-                        width: 152,
-                        child: Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                  top: 16, right: 16, left: 120),
-                              child: InkWell(
-                                onTap: () {},
-                                child: SvgPicture.asset(
-                                  "assets/images/Vector (1).svg",
-                                  height: 14.32,
-                                  width: 16.0,
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                  top: 10, bottom: 0, right: 36, left: 36),
-                              child: Image.asset(
-                                "assets/images/Best-Ever-Tropical-Fruit-Salad8-WIDE-removebg-preview 1.png",
-                                fit: BoxFit.scaleDown,
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.only(top: 18, bottom: 0),
-                              child: Text(
-                                "Tropical fruit salad",
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontFamily: "Brandon",
-                                  color: Color(0xff27214D),
-                                ),
-                              ),
-                            ),
-                            Row(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                    top: 10,
-                                    bottom: 11,
-                                    left: 12,
-                                  ),
-                                  child: SvgPicture.asset(
-                                    "assets/images/Group (1).svg",
-                                    height: 13,
-                                    width: 16,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                    left: 5,
-                                    bottom: 2,
-                                    top: 0,
-                                  ),
-                                  child: Text(
-                                    "10,000",
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                      fontFamily: "Brandon_reg",
-                                      color: Color(0xffF08626),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                      left: 5,
+                                      bottom: 2,
+                                      top: 0,
+                                    ),
+                                    child: Text(
+                                      "10,000",
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        fontFamily: "Brandon_reg",
+                                        color: Color(0xffF08626),
+                                      ),
                                     ),
                                   ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                      bottom: 6, right: 16, left: 35),
-                                  child: InkWell(
-                                    onTap: () {},
-                                    child: SvgPicture.asset(
-                                        "assets/images/Group 10.svg"),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Card(
-                      color: Color(0xffF1EFF6),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16.0),
-                      ),
-                      child: Container(
-                        height: 183,
-                        width: 152,
-                        child: Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                  top: 16, right: 16, left: 120),
-                              child: InkWell(
-                                onTap: () {},
-                                child: SvgPicture.asset(
-                                  "assets/images/Vector (1).svg",
-                                  height: 14.32,
-                                  width: 16.0,
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                  top: 10, bottom: 0, right: 36, left: 36),
-                              child: Image.asset(
-                                "assets/images/BerryWorld-Kiwiberry-Fruit-Salad-LS-removebg-preview 1.png",
-                                fit: BoxFit.scaleDown,
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.only(top: 18, bottom: 0),
-                              child: Text(
-                                "melon fruit salad",
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontFamily: "Brandon",
-                                  color: Color(0xff27214D),
-                                ),
-                              ),
-                            ),
-                            Row(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                    top: 10,
-                                    bottom: 11,
-                                    left: 12,
-                                  ),
-                                  child: SvgPicture.asset(
-                                    "assets/images/Group (1).svg",
-                                    height: 13,
-                                    width: 16,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                    left: 5,
-                                    bottom: 2,
-                                    top: 0,
-                                  ),
-                                  child: Text(
-                                    "10,000",
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                      fontFamily: "Brandon_reg",
-                                      color: Color(0xffF08626),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        bottom: 6, right: 16, left: 35),
+                                    child: InkWell(
+                                      onTap: () {},
+                                      child: SvgPicture.asset(
+                                          "assets/images/Group 10.svg"),
                                     ),
                                   ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                      bottom: 6, right: 16, left: 35),
-                                  child: InkWell(
-                                    onTap: () {},
-                                    child: SvgPicture.asset(
-                                        "assets/images/Group 10.svg"),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                      Card(
+                        color: Color(0xffF1EFF6),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16.0),
+                        ),
+                        child: Container(
+                          height: 183,
+                          width: 152,
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    top: 16, right: 16, left: 120),
+                                child: InkWell(
+                                  onTap: () {},
+                                  child: SvgPicture.asset(
+                                    "assets/images/Vector (1).svg",
+                                    height: 14.32,
+                                    width: 16.0,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    top: 10, bottom: 0, right: 36, left: 36),
+                                child: Image.asset(
+                                  "assets/images/BerryWorld-Kiwiberry-Fruit-Salad-LS-removebg-preview 1.png",
+                                  fit: BoxFit.scaleDown,
+                                ),
+                              ),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.only(top: 18, bottom: 0),
+                                child: Text(
+                                  "melon fruit salad",
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontFamily: "Brandon",
+                                    color: Color(0xff27214D),
+                                  ),
+                                ),
+                              ),
+                              Row(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                      top: 10,
+                                      bottom: 11,
+                                      left: 12,
+                                    ),
+                                    child: SvgPicture.asset(
+                                      "assets/images/Group (1).svg",
+                                      height: 13,
+                                      width: 16,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                      left: 5,
+                                      bottom: 2,
+                                      top: 0,
+                                    ),
+                                    child: Text(
+                                      "10,000",
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        fontFamily: "Brandon_reg",
+                                        color: Color(0xffF08626),
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        bottom: 6, right: 16, left: 35),
+                                    child: InkWell(
+                                      onTap: () {},
+                                      child: SvgPicture.asset(
+                                          "assets/images/Group 10.svg"),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],

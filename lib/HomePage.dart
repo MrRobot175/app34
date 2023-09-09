@@ -49,7 +49,7 @@ class SecondScreen extends StatelessWidget {
             height: 90,
             child: Container(
               child: Padding(
-                padding: const EdgeInsets.only(top: 60, right: 70, bottom: 0),
+                padding: const EdgeInsets.only(top: 60, right: 60, bottom: 0),
                 child: Text(
                   "Get The Freshest Fruit Salad Combo",
                   style: TextStyle(
@@ -64,7 +64,7 @@ class SecondScreen extends StatelessWidget {
           ),
           Container(
             child: Padding(
-              padding: const EdgeInsets.only(left: 24, right: 88),
+              padding: const EdgeInsets.only(left: 35, right: 88),
               child: Text(
                 "We deliver the best and freshest fruit salad in town. Order for a combo today!!!",
                 style: TextStyle(
@@ -77,7 +77,10 @@ class SecondScreen extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 65),
+            padding: const EdgeInsets.only(
+              top: 65,
+              bottom: 77,
+            ),
             child: Container(
               width: 350,
               height: 56,
